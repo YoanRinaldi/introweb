@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>FORMULAIRE</title>
+	<meta  charset="UTF-8">
+	<meta name="title" content="Titre de la page">
+	<meta name="description" content="description de la page">
+	<meta name="author" content="prenon NOM">
+	<meta name="keywords" content="mots-clé1, mots-clé2, ...">
+	<meta name="robots" content="index,follow">
+	<link rel="stylesheet " href ="style.css"/>
+</head>
+<div class="form-style">
+	<h1>Entrez les informations du membre</h1>
+	<div>
+		<label for="Nom">Nom <span>*</span></label>
+		<input type="text" name="txtNom" value="" required="required"/>
+		<br>
+	</div>
+	<div><label for="Prenom">Prenom <span>*</span></label>
+		<input type="text" name="txtPrenom" value="" required="required"/>
+		<br>
+	</div>
+
+	<div>
+
+		<label for="Adresse">Adresse</label>
+		<input type="text" name="txtAdresse" placeholder="999 rue" value=""/>
+		<br>
+	</div>
+
+	<div>
+		<label for="Ville">Ville</label>
+		<input type="text" name="txtVille"  value=""/>
+		<br>
+	</div>
+	<div>
+		<label for="Telephone">Telephone<span>*</span></label>
+		<input type="tel" name="telTel" placeholder="999 999-999" value="" required="required"/>
+		<br>
+	</div>
+	<div>
+		<label for="DI">Date d inscription<span>*</span></label>
+		<input type="text" name="txtDI" placeholder="jj/ms/aaaa" value="" required="required"/>
+		<br>
+	</div>
+	<div>
+		<label for="DF">Date de fin</label>
+		<input type="date" name="txtDF"  value=""/>
+		<br>
+	</div>
+	<div>
+		<label for="Sexe">Sexe</label>
+		<input type="radio" name="radSexe"  value="Masculin" checked/> Masculin
+		<input type="radio" name="radSexe"  value="Feminin" />Feminin
+		<br>
+	</div>
+	<div>
+		<label for="Choix">Choix</label>
+		<select name="maListe">
+			<option value="Choix1">American Express</option>
+			<option value="Choix2">MDR</option>
+			<option value="Choix3">Lol</option>
+			<option value="Choix4">Express American</option>
+		</select>
+		<br>
+	</div>
+	<div>
+		<label for="CC">Carte de Credit<span>*</span></label>
+		<input type="text" name="txtCC" placeholder="9999 9999 9999 9999"  value="" required="required"/>
+		<br>
+	</div>
+	<div  >
+		<label for="MDP">Mot de passe<span>*</span></label>
+		<input type="password" name="MDP"  value="" required="required"/>
+		<br>
+	</div>
+	<div>
+		<label for="Courriel">Courriel</label>
+		<input type="email" name="Email" placeholder="aaaaa@aaaa.aaa" value=""/>
+		<br>
+	</div>
+	<br>
+	<br>
+	
+	<div  >
+		<input class="bouton" type="submit"   value="Envoyer"/>
+		<input  class="bouton" type="reset"   value="Reinitialiser"/>
+
+	</div>
+
+
+
+</div>
+</body>
+</html>

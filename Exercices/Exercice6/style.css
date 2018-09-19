@@ -1,0 +1,39 @@
+
+h1
+{
+    font-size: x-large;
+    text-align: center;
+}
+
+span
+{
+    color: red;
+}
+div
+{
+    font-size: larger;
+}
+:required
+{
+    border: 1px dotted cyan;
+}
+label
+{
+    display: inline-block;
+
+    width: 20%;
+
+}
+
+
+
+
+
+.bouton
+{
+   background-color: darkblue;
+    color: white;
+    font-size: x-large;
+    margin-left: 5%;
+
+}
