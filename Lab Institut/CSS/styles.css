@@ -185,6 +185,7 @@ textarea{
 caption{
 
 	font-size: xx-large;
+    color: #b1cb97;
 }
 table{
 	margin: 3%;
@@ -192,11 +193,11 @@ table{
 	text-align: center;
 }
 th{
-	color: purple;
+	
 	font-size: x-large;
 }
 tr,th{
-	border: 3px solid blue;
+	border: 3px solid #b1cb97;
 	width: 5%;
 }
 .non{
