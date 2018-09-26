@@ -174,10 +174,7 @@ textarea{
 #tel{
 	width: 10%;
 }
-#Com{
-	width: 40%;
-	height: 30%;
-}
+
 #bout{
 	margin-left: 5%;
 	margin-top: 2%;
@@ -193,7 +190,7 @@ table{
 	text-align: center;
 }
 th{
-	
+
 	font-size: x-large;
 }
 tr,th{
