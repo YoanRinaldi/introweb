@@ -193,6 +193,10 @@ th{
 
 	font-size: x-large;
 }
+th:hover{
+	background: aquamarine;
+}
+
 tr,th{
 	border: 3px solid #b1cb97;
 	width: 5%;
