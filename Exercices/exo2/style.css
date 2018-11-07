@@ -1,0 +1,50 @@
+body{
+    text-align : center;
+    width : 800px;
+    margin-top : 100px;
+    margin-left:auto;
+    margin-right:auto;
+    background-image:url(./image/fond.jpg);
+}
+p{
+    font-size: x-large;
+    color: crimson;
+
+}
+span{
+    color: aqua;
+}
+ul{
+    font-size: xx-large;
+
+}
+a{
+    color: pink;
+    font-style: italic;
+}
+h1,h2 {
+    font-size : 50px;
+    font-family : cursive;
+    background : aqua;
+
+}
+.test{
+    font-size: xx-large;
+}
+#jaune{
+    color: yellow;
+    font-style: italic;
+}
+#marron{
+    color: maroon;
+    font-style: revert;
+}
+#rouge{
+    color: red;
+    font-style: oblique;
+}
+#vert{
+    color: green;
+    font-style: unset;
+}
+

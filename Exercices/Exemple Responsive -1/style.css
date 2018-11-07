@@ -1,0 +1,23 @@
+/*Si la taille de l'écran d'un visiteur est inférieure à 480px, la couleur
+ *de fond de notre élément body (donc de notre page) sera orange*/
+@media screen and (max-width: 680px){
+    body{
+        background-color: orange;
+    }
+}
+
+/*Pour les écrans ayant une taille entre 481px et 1179px, la couleur de
+ *fond de notre page sera bleue*/
+@media screen and (min-width: 681px) and (max-width: 1279px){ 
+    body{
+        background-color: blue;
+    }
+}
+
+/*Pour les écrans d'une taille supérieure à 1280px, le fond de la page sera
+ *de couleur verte*/
+@media screen and (min-width: 1280px){
+    body{
+        background-color: green;
+    }
+}

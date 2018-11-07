@@ -1,0 +1,46 @@
+﻿main{
+	margin:0 auto; /* permet de centrer la page*/
+	width: 55%;  
+}
+.img
+{
+	text-align:center;
+}
+header
+{
+	text-align: center;
+
+}
+
+nav
+{
+	width : 150px ;
+	border : 1px solid blue ;
+	float: left;
+	margin-right: 5%;
+}
+.article
+{
+	border : 1px solid blue ;
+	text-align: center;
+	display:inline-block;
+	margin-right: 2%;
+	width: 30%;
+}
+
+.aside
+{
+	border : 1px solid blue ;
+	text-align: center;
+	display:inline-block;
+	vertical-align: top;
+	width: 30%;
+}
+
+footer
+{
+	text-align: center;
+
+}
+
+
