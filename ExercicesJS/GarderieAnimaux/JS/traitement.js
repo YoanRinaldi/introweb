@@ -81,7 +81,7 @@ function ChoisirV()
 }
   function Afficher()
   {
-      document.getElementById("lblMessage").innerHTML = "Vous avez choisi le " +Veto + " pour garder votre " +Animal +" pour " +NbJours + " jours, et cela vous coutera "+Montant +" $CA";
+      document.getElementById("lblMessage").innerHTML = "Vous avez choisi le fameux " +Veto + " pour garder votre " +Animal +" pour " +NbJours + " jours, et cela vous coutera "+Montant +" $CA";
 
   }
 
