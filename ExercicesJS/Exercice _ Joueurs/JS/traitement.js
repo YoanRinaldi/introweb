@@ -2,8 +2,6 @@ var comp=0;
 var Point,Nom, tabNom=new Array(4),tabPoint=new Array(4);
 function btnAjouter_onclick()
 {
-
-
     Nom=document.getElementById("txtNom").value;
     Point=parseFloat(document.getElementById("txtPoints").value);
     tabNom[comp]=Nom;
@@ -15,9 +13,11 @@ function btnAjouter_onclick()
         document.getElementById("btnTrouverMoy").disabled=false;
         document.getElementById("btnTrouverMeilleur").disabled=false;
         document.getElementById("btnTrouverPire").disabled=false;
+        document.getElementById("btnRechercher").disabled=false;
         document.getElementById("btnAjouter").disabled=true;
     }
     document.getElementById("lblReponse").innerHTML="Votre nombre de joueur est de "+comp;
+    document.getElementById("lblNbreJoueur").innerHTML="Numéro du joueur  "+comp;
 
 }
 function btnMoy_onclick()
@@ -59,5 +59,31 @@ function btnPM_onclick()
         }
     }
     document.getElementById("lblReponse").innerHTML="Votre pire  joueur est  "+NomPire+" avec un nombre de point de "+Pire;
+
+}
+function btnRechercher_onclick()
+{
+    var trouver=false, i=0;
+     Nom=document.getElementById("txtNom").value;
+    while(trouver==false && i<4)
+    {
+        if(Nom==tabNom[i])
+        {
+            trouver=true;
+        }
+        else
+            {
+                i++;
+            }
+    }
+    if( trouver==true)
+    {
+        document.getElementById("lblReponse").innerHTML="Le joueur "+Nom+" a "+tabPoint[i]+" point ";
+    }
+    else
+        {
+            document.getElementById("lblReponse").innerHTML="Le joueur "+Nom+" n existe pas " ;
+
+        }
 
 }

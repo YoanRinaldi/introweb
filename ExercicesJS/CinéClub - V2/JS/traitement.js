@@ -30,3 +30,17 @@ if(document.getElementById("chkMiSession").checked== true)
     console.log("Un billet du "+ Rep +" pour un spectateur de "+ Age +" coute $"+ Prix +" pour le film "+ Film);
 }
 }
+function btnList_onclick()
+{
+    var Film;
+    Film=(document.getElementById("lstOptions").value);
+    switch (Film)
+    {
+        case "Au poste!":
+
+            break;
+
+    }
+
+
+}
