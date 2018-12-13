@@ -1,46 +1,72 @@
-function btnCalculer_onclick()
-{
-    var Age,Prix,Rep,Film;
+var  PrixIn, Age, Rabais, PrixFin, Temps, Film;
 
-    Age=parseFloat(document.getElementById("txtAge").value);
-    Prix=parseFloat(document.getElementById("txtBasePrix").value);
-    Film=(document.getElementById("lstOptions").value);
-    Rep="midi";
 
-if(document.getElementById("chkMiSession").checked== true)
+
+function trouverAge()
 {
-    if(Age>=5)
+    Age=parseInt(document.getElementById("txtAge").value);
+
+    if(document.getElementById("chkMiSession").checked==true)
     {
-        if(document.getElementById("radMidi").checked== true)
+
+
+        if (Age<=16)
         {
-            Prix=Prix-0.6*Prix;
-        }else
+            if(document.getElementById("radMidi").checked==true)
             {
-                Prix=Prix-0.4*Prix;
-                Rep="soir";
+                Rabais=0.6;
+                Temps="midi";
             }
-    }else if(document.getElementById("radMidi").checked== true)
-    {
-        Prix=Prix-0.3*Prix;
-    }else
-        {
-            Rep="soir";
-
+            else {
+                Rabais=0.4;
+                Temps="soir";
+            }
         }
-    console.log("Un billet du "+ Rep +" pour un spectateur de "+ Age +" coute $"+ Prix +" pour le film "+ Film);
-}
-}
-function btnList_onclick()
-{
-    var Film;
-    Film=(document.getElementById("lstOptions").value);
-    switch (Film)
-    {
-        case "Au poste!":
+        else{
+            if(document.getElementById("radMidi").checked==true)
+            {
+                Rabais=0.3;
+                Temps="midi";
+            }
+            else{
+                Rabais=0;
+                Temps="soir"
+            }
+        }
+    }
+    else{
+        Rabais=0;
 
-            break;
+        if(document.getElementById("radMidi").checked==true)
+        {
+            Temps="midi";
+        }
+        else{
+            Temps="soir"
+        }
 
     }
+}
 
+function calculerPrix()
+{
+    PrixIn=parseFloat(document.getElementById("txtBasePrix").value);
+    trouverAge();
+    PrixFin=PrixIn-(PrixIn*Rabais);
+}
+
+function btnCalculer_onclick()
+{
+
+    Film=document.getElementById("lstOptions").value;
+    calculerPrix();
+    console.log("Un billet du "+Temps+" pour un spectateur de "+Age+" ans coûte " +PrixFin+"$ pour le film "+Film);
+
+}
+function lstImage_onchange()
+{
+
+    Film=document.getElementById("lstOptions").value;
+    document.getElementById("imgFilm").src="img/"+Film+".jpg";
 
 }

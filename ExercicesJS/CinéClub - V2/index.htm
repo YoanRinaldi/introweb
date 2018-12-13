@@ -3,7 +3,7 @@
 <head>
    <link rel="stylesheet" href="CSS/style.css">
    <title>Le Cinéclub</title>
-<meta charset="UTF-8">
+   <meta charset="UTF-8">
 </head>
 <body>
 <!-- Boite de texte -->
@@ -11,16 +11,15 @@
    <fieldset>
       <legend><h1>Le Cinéclub</h1></legend>
       <!-- Boîtes de texte -->
-      <p> Entrez le prix de base:<input id="txtBasePrix" name="txtBasePrix" ></p>
-      <p> Entrez l'âge:<input id="txtAge" name="txtAge" ></p>
+      <p> Entrez le prix de base:<input id="txtBasePrix" name="txtBasePrix"></p>
+      <p> Entrez l'âge:<input id="txtAge" name="txtAge"></p>
       <!-- Liste déroulante -->
       <p> Sélectionnez le choix du film:
-         <select 
-           id="lstOptions" size=1 name="lstOptions" onclick="btnList_onclick()">
-         	<option selected >Au poste!</option>
-         	<option >Colette</option>
-         	<option >Halloween</option>
-         	<option >La religieuse</option>
+         <select id="lstOptions" size=1 name="lstOptions" onchange="lstImage_onchange()">
+            <option selected value="Au poste!">Au poste!</option>
+            <option value="Colette">Colette</option>
+            <option value="Halloween">Halloween</option>
+            <option value="La religieuse">La religieuse</option>
          </select>
       </p>
       <!-- Radio bouton -->
@@ -31,10 +30,14 @@
       <!-- label affichage -->
       <p id="lblMessage" name="lblMessage"></p>
       <!-- Bouton -->
+   </fieldset>
+   <fieldset>
       <p><button id="btnCalculer" name="btnCalculer" type="button" onclick="btnCalculer_onclick()">Calculer</button></p>
-       <script src="js/traitement.js"></script>
    </fieldset>
 </form>
-<img id="imgFilm" src="">
+<div >
+   <img id="imgFilm" >
+</div>
+<script src="JS/cinéclubV2.js"></script>
 </body>
 </html>

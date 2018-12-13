@@ -2,23 +2,23 @@ var Veto, NbJours, Animal, Cout, ServToilet, Montant, choix, NbH;
 
 
 
-
 function btnCalculer_onclick()
 {
-
-
     Veto = document.getElementById("lstVeterinaire").value;
     NbJours = parseFloat(document.getElementById("txtNbreJours").value);
     NbH = parseFloat(document.getElementById("txtNbreH").value);
-    CalculToi();
-    IdentiAnimal();
-    CalculMontantJour();
-    ChoisirV();
-    Afficher();
+    CalculerToiletage();
+    IdentifierAnimal();
+    CalculerMontantParJours();
+    ChoisirVeto();
+
+
+
+    document.getElementById("lblMessage").innerHTML = "Vous avez choisi " +Veto + " pour garder votre " +Animal +" pour " +NbJours + " jours, et cela vous coutera "+Montant +" $CA";
 
 }
 
-function CalculToi()
+function CalculerToiletage()
 {
     if (document.getElementById("chkServ").checked == true)
     {
@@ -28,9 +28,9 @@ function CalculToi()
     {
         ServToilet = 0;
     }
-
 }
-function IdentiAnimal()
+
+function IdentifierAnimal()
 {
     if (document.getElementById("radChien").checked == true)
     {
@@ -44,7 +44,7 @@ function IdentiAnimal()
     }
 }
 
-function CalculMontantJour()
+function CalculerMontantParJours()
 {
     if (NbJours < 5 && NbJours > 10)
     {
@@ -61,7 +61,7 @@ function CalculMontantJour()
     Montant = (Cout*NbJours) + ServToilet;
 }
 
-function ChoisirV()
+function ChoisirVeto()
 {
     switch (choix)
     {
@@ -79,12 +79,3 @@ function ChoisirV()
             break;
     }
 }
-  function Afficher()
-  {
-      document.getElementById("lblMessage").innerHTML = "Vous avez choisi le fameux " +Veto + " pour garder votre " +Animal +" pour " +NbJours + " jours, et cela vous coutera "+Montant +" $CA";
-
-  }
-
-
-
-
